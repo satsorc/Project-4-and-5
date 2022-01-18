@@ -40,7 +40,7 @@ public class Client extends JFrame implements ActionListener {
         topPanel.setBounds(0, 0, 450, 70);
         mainFrame.add(topPanel);
 
-        ImageIcon cross_mark = new ImageIcon(ClassLoader.getSystemResource("com/socket/img/cross_mark.png"));
+        ImageIcon cross_mark = new ImageIcon(ClassLoader.getSystemResource("socketProject/img/cross_mark.png"));
         Image cross_mark2 = cross_mark.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         ImageIcon cross_mark3 = new ImageIcon(cross_mark2);
         JLabel cross_markLabel = new JLabel(cross_mark3);
@@ -61,7 +61,7 @@ public class Client extends JFrame implements ActionListener {
         topPanel.add(profileImgLabel);
 
 
-        ImageIcon sunImg1 = new ImageIcon(ClassLoader.getSystemResource("com/socket/img/sun.png"));
+        ImageIcon sunImg1 = new ImageIcon(ClassLoader.getSystemResource("socketProject/img/sun.png"));
         Image sunImg2 = sunImg1.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon sunImg3 = new ImageIcon(sunImg2);
         JLabel sunLabel = new JLabel(sunImg3);
@@ -83,7 +83,7 @@ public class Client extends JFrame implements ActionListener {
         });
 
 
-        ImageIcon moonImg = new ImageIcon(ClassLoader.getSystemResource("com/socket/img/moon.png"));
+        ImageIcon moonImg = new ImageIcon(ClassLoader.getSystemResource("socketProject/img/moon.png"));
         Image moonImg2 = moonImg.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon moonImg3 = new ImageIcon(moonImg2);
         JLabel moonLabel = new JLabel(moonImg3);
@@ -165,6 +165,8 @@ public class Client extends JFrame implements ActionListener {
             }
         });
 
+
+        //보내기 버튼 추가
         sendButton = new JButton("Send");
         sendButton.setBounds(320, 655, 123, 40);
         sendButton.setBackground(new Color(7, 94, 84));
@@ -176,8 +178,8 @@ public class Client extends JFrame implements ActionListener {
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.getContentPane().setBackground(Color.WHITE);
         mainFrame.setLayout(null);
-        mainFrame.setSize(450, 730);
-        mainFrame.setLocation(2300, 300);
+        mainFrame.setSize(450, 700);
+        mainFrame.setLocation(700, 100);
         mainFrame.setUndecorated(true);
         mainFrame.setVisible(true);
 
@@ -260,26 +262,25 @@ public class Client extends JFrame implements ActionListener {
 
         switch (num){
             case 1:
-                return "com/socket/img/cat.png";
+                return "socketProject/img/cat.png";
 
             case 2:
-                return "com/socket/img/dog.png";
+                return "socketProject/img/dog.png";
 
             case 3:
-                return "com/socket/img/monkey.png";
+                return "socketProject/img/monkey.png";
 
             case 4:
-                return "com/socket/img/pig.png";
+                return "socketProject/img/pig.png";
 
             case 5:
-                return "com/socket/img/frog.png";
+                return "socketProject/img/frog.png";
             case 6:
-                return "com/socket/img/koala.png";
+                return "socketProject/img/koala.png";
             case 7:
-                return "com/socket/img/fox.png";
+                return "socketProject/img/fox.png";
             case 8:
-                return "com/socket/img/panda.png";
-
+                return "socketProject/img/panda.png";
 
         }
 

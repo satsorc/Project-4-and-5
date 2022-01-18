@@ -45,7 +45,9 @@ public class Server extends JFrame implements ActionListener{
         topPanel.setBounds(0, 0, 450, 70);
         mainFrame.add(topPanel);
 
-        ImageIcon cross_mark = new ImageIcon(ClassLoader.getSystemResource("com/socket/img/cross_mark.png"));
+
+        // Escape label
+        ImageIcon cross_mark = new ImageIcon(ClassLoader.getSystemResource("socketProject/img/cross_mark.png"));
         Image cross_mark2 = cross_mark.getImage().getScaledInstance(20, 20, Image.SCALE_DEFAULT);
         ImageIcon cross_mark3 = new ImageIcon(cross_mark2);
         JLabel cross_markLabel = new JLabel(cross_mark3);
@@ -66,7 +68,8 @@ public class Server extends JFrame implements ActionListener{
         topPanel.add(profileImgLabel);
 
 
-        ImageIcon sunImg1 = new ImageIcon(ClassLoader.getSystemResource("com/socket/img/sun.png"));
+        //Light mode
+        ImageIcon sunImg1 = new ImageIcon(ClassLoader.getSystemResource("socketProject/img/sun.png"));
         Image sunImg2 = sunImg1.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon sunImg3 = new ImageIcon(sunImg2);
         JLabel sunLabel = new JLabel(sunImg3);
@@ -88,7 +91,8 @@ public class Server extends JFrame implements ActionListener{
         });
 
 
-        ImageIcon moonImg = new ImageIcon(ClassLoader.getSystemResource("com/socket/img/moon.png"));
+        //Dark mode
+        ImageIcon moonImg = new ImageIcon(ClassLoader.getSystemResource("socketProject/img/moon.png"));
         Image moonImg2 = moonImg.getImage().getScaledInstance(25, 25, Image.SCALE_DEFAULT);
         ImageIcon moonImg3 = new ImageIcon(moonImg2);
         JLabel moonLabel = new JLabel(moonImg3);
@@ -125,6 +129,9 @@ public class Server extends JFrame implements ActionListener{
         activityLabel.setBounds(110, 35, 100, 20);
         topPanel.add(activityLabel);
 
+
+
+        //Timer -
         Timer t = new Timer(1, new ActionListener(){
             public void actionPerformed(ActionEvent ae){
                 if(!typing){
@@ -188,8 +195,8 @@ public class Server extends JFrame implements ActionListener{
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         mainFrame.getContentPane().setBackground(new Color(238, 238, 238));
         mainFrame.setLayout(null);
-        mainFrame.setSize(450, 730);
-        mainFrame.setLocation(1800, 300);
+        mainFrame.setSize(450, 700);
+        mainFrame.setLocation(200, 100);
         mainFrame.setUndecorated(true);
         mainFrame.setVisible(true);
 
@@ -233,6 +240,7 @@ public class Server extends JFrame implements ActionListener{
         l1.setOpaque(true);
         l1.setBorder(new EmptyBorder(15,15,15,50));
 
+        //adding time function
         Calendar cal = Calendar.getInstance();
         SimpleDateFormat sdf = new SimpleDateFormat("HH:mm");
 
@@ -270,31 +278,33 @@ public class Server extends JFrame implements ActionListener{
         }catch(Exception e){}
     }
 
+
+    // 램덤 프로필 이미지
     public static String randomIcon(){
 
         int num = (int) Math.ceil((Math.random()*8));
 
         switch (num){
             case 1:
-                return "com/socket/img/cat.png";
+                return "socketProject/img/cat.png";
 
             case 2:
-                return "com/socket/img/dog.png";
+                return "socketProject/img/dog.png";
 
             case 3:
-                return "com/socket/img/monkey.png";
+                return "socketProject/img/monkey.png";
 
             case 4:
-                return "com/socket/img/pig.png";
+                return "socketProject/img/pig.png";
 
             case 5:
-                return "com/socket/img/frog.png";
+                return "socketProject/img/frog.png";
             case 6:
-                return "com/socket/img/koala.png";
+                return "socketProject/img/koala.png";
             case 7:
-                return "com/socket/img/fox.png";
+                return "socketProject/img/fox.png";
             case 8:
-                return "com/socket/img/panda.png";
+                return "socketProject/img/panda.png";
 
 
         }
